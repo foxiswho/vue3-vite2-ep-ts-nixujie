@@ -13,19 +13,28 @@ yarn
 ```bash
 yarn dev
 ```
-
+默认使用 `development` 配置
 # 编译
 ```bash
 yarn build
 ```
+默认使用 `production` 配置
+
 编译后目录位于根目录下 `dist` 
 
+# 编译后预览
+```bash
+yarn preview
+```
 
 # 预览
 
 [github地址预览](https://foxiswho.github.io/vue3-vite2-ep-ts-nixujie/index.html)
 
 [gitee地址预览](http://foxiswho.gitee.io/vue3-vite2-ep-ts-nixujie/index.html)
+
+![登陆](https://github.com/foxiswho/vue3-vite2-ep-ts-nixujie/raw/master/doc/img/p-login.png)
+![后台主页](https://github.com/foxiswho/vue3-vite2-ep-ts-nixujie/raw/master/doc/img/p-dashboard.png)
 
 # 其他命令
 
