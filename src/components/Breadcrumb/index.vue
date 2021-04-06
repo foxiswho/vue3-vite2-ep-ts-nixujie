@@ -57,9 +57,9 @@ export default defineComponent({
       router.push(pathCompile(path))
     }
 
-    function routeProcess(route: any) {
+    function routeProcess(routePath: any) {
       // if you go to the redirect page, do not update the breadcrumbs
-      if (route.path.startsWith('/redirect/')) {
+      if (routePath.startsWith('/redirect/')) {
         return
       }
       getBreadcrumb()
@@ -68,7 +68,7 @@ export default defineComponent({
     getBreadcrumb()
 
 
-    watch(route, routeProcess)
+    watch(()=>route.path?route.path:'', routeProcess)
     return {
       levelList,
       handleLink

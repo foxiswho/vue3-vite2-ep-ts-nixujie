@@ -82,7 +82,7 @@ export default {
     function resolvePath2(routePath?: any) {
       // console.log(props.basePath,"=",routePath)
       let ph = resolvePath(props.basePath != null && props.basePath ? props.basePath : '', routePath != null && routePath ? routePath : '')
-      console.log(props.basePath,"=",routePath,'=',ph)
+      //console.log(props.basePath,"=",routePath,'=',ph)
       return ph
     }
    // console.log(props.activeMenu)

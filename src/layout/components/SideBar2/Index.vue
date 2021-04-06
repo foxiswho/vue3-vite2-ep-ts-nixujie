@@ -38,12 +38,12 @@ export default defineComponent({
 			}
 			return path;
 		});
-		console.log('activeMenu',activeMenu)
-		console.log('activeMenu',activeMenu)
+		//console.log('activeMenu',activeMenu)
+		//console.log('activeMenu',activeMenu)
 		const isCollapse = computed(() => !store.getters.sidebar.opened);
 		// console.log(mapState(['permission']), 'mapState');
-    console.log('store.getters',store.getters)
-    console.log(store.getters.routes)
+    //console.log('store.getters',store.getters)
+    //console.log(store.getters.routes)
 		const routes = computed(() => {
       if(store.getters.routes && store.getters.routes.length>0) {
         return  store.getters.routes
@@ -51,7 +51,7 @@ export default defineComponent({
       return []
     });
 		// const r = computed(() => mapGetters(['routes']));
-		console.log(mapGetters(['routes']));
+		//console.log(mapGetters(['routes']));
 		const handleOpen = () => {
 			// to do
 		};

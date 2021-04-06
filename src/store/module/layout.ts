@@ -96,6 +96,12 @@ const mutations = {
     state.sidebar.opened = false
     state.sidebar.withoutAnimation = withoutAnimation
   },
+  // 侧边栏 打开
+  OPEN_SIDEBAR: (state: ILayout, withoutAnimation: boolean) => {
+    localStorage.setItem('sidebarStatus', '1')
+    state.sidebar.opened = true
+    state.sidebar.withoutAnimation = withoutAnimation
+  },
   // 侧边栏 设备
   TOGGLE_DEVICE: (state: ILayout, device: string) => {
     state.settings.device = device
@@ -347,6 +353,7 @@ const actions = {
         }
         context.commit('SET_TOKEN', info)
         context.commit('SET_ROLES', info.ACCESS_USER.roles)
+        context.commit('OPEN_SIDEBAR', false)
         // context.commit('SET_NAME', info.ACCESS_USER.name)
         // context.commit('SET_AVATAR', info.ACCESS_USER.avatar)
         // context.commit('SET_INTRODUCTION', info.ACCESS_USER.introduction)
