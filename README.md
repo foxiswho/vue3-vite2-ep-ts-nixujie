@@ -25,6 +25,8 @@ yarn build
 
 [github地址预览](https://foxiswho.github.io/vue3-vite2-ep-ts-nixujie/index.html)
 
+[gitee地址预览](http://foxiswho.gitee.io/vue3-vite2-ep-ts-nixujie/index.html)
+
 # 其他命令
 
 ```bash
