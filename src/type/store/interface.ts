@@ -64,6 +64,7 @@ export interface ISetting {
   // 大小 medium
   size: number | string,
 }
+
 // 用户
 export interface IUserInfo {
   id: number,
@@ -72,4 +73,12 @@ export interface IUserInfo {
   avatar: string,
   introduction: string,
   roles: Array<string>,
+}
+
+// 环境变量
+export interface IEnv {
+  PORT: number,
+  PORT_STRING: string,
+  APP_BASE_API: string,
+  APP_BASE_URL: string,
 }
