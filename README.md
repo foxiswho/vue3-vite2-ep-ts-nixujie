@@ -19,6 +19,12 @@ yarn dev
 yarn build
 ```
 编译后目录位于根目录下 `dist` 
+
+
+# 预览
+
+[github地址预览](https://foxiswho.github.io/vue3-vite2-ep-ts-nixujie/index.html)
+
 # 其他命令
 
 ```bash
