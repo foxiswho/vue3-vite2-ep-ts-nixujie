@@ -6,8 +6,8 @@ import path from 'path'
 
 export default defineConfig({
   publicDir:'public',
-  // base:'/',
-  base:'/vue3-vite2-ep-ts-nixujie',
+  // base:'/', //默认顶级目录
+  //base:'/vue3-vite2-ep-ts-nixujie', //二级目录
   resolve: {
     alias: [
       {find: '@', replacement: path.resolve(__dirname, 'src')}
