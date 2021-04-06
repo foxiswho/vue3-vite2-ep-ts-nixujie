@@ -33,6 +33,9 @@ yarn global add @vue/cli@next
 
 yarn add -D path
 vue upgrade --next
+
+#Added non-passive event listener to a scroll-blocking 'mousewheel' event. Consider marking event handler as 'passive' to make the page more responsive. See https://www.chromestatus.com/feature/5745543795965952
+yarn add default-passive-events --dev
 ```
 
 # 感谢 PanJiaChen vue-element-admin

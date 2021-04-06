@@ -1,3 +1,4 @@
+import 'default-passive-events';  //去除touchstart谷歌提示
 import { createApp } from 'vue'
 import App from './App.vue'
 import ElementPlus from 'element-plus'
