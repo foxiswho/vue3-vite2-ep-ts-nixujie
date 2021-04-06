@@ -32,7 +32,7 @@ yarn build
 ```bash
 yarn add -g create-vite-app
 
-yarn create vite-app <project-name>
+yarn create @vitejs/app my-first-vite-app --template vue
 
 yarn add --dev typescript
 
