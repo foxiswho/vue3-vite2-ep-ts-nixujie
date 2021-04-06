@@ -17,3 +17,4 @@ tests/**/coverage/
 !deploy/test/dist
 deploy/test/dist/*
 deploy/test/ui-html
+.env.local
