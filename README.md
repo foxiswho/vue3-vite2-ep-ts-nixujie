@@ -36,18 +36,23 @@ yarn preview
 ![登陆](https://gitee.com/foxiswho/vue3-vite2-ep-ts-nixujie/raw/main/doc/img/p-login.png)
 ![后台主页](https://gitee.com/foxiswho/vue3-vite2-ep-ts-nixujie/raw/main/doc/img/p-dashboard.png)
 
+# 创建项目
+```bash
+# 创建 my-first-vite-app 初始化相关目录和文件
+yarn create @vitejs/app my-first-vite-app --template vue
+# 添加 typescript 支持
+yarn add --dev typescript
+# 使用 vue3
+yarn global add @vue/cli@next
+# 初始化包
+yarn 
+# 开发运行
+yarn dev
+```
 # 其他命令
 
 ```bash
 yarn add -g create-vite-app
-
-yarn create @vitejs/app my-first-vite-app --template vue
-
-yarn add --dev typescript
-
-
-yarn global add @vue/cli@next
-
 yarn add -D path
 vue upgrade --next
 
