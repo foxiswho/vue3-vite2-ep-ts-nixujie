@@ -1,6 +1,6 @@
 
 const defaultSettings = {
-    title: 'Vue Element Admin',
+    title: '须弥戒后台。Vue3 ElementPlus Admin',
 
     /**
      * @type {boolean} true | false

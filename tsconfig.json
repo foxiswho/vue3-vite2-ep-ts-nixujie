@@ -12,6 +12,7 @@
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
      "noImplicitAny": true,
+    "isolatedModules": true, //由于esbuild仅执行不带类型信息的转译，因此它不支持某些功能，例如const枚举和隐式仅类型的导入
     "baseUrl": ".",
     "paths": {
       "@/*": [

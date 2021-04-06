@@ -1,4 +1,4 @@
-# 须弥戒
+# 须弥戒后台
 elementPlus TypeScript vue3 Vite 2.0 Vue-Router 4.0 Echart 5.0 Axios
 
 # 安装 yarn

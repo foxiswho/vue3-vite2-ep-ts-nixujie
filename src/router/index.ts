@@ -198,8 +198,8 @@ export const asyncRoutes: Array<IMenubarList> = [
 ]
 
 const initCreateRouter = () => createRouter({
-  // history: createWebHashHistory(), // createWebHistory
-  history: createWebHistory(),
+  history: createWebHashHistory(), // createWebHistory
+  // history: createWebHistory(),
   routes: constantRoutes.concat(asyncRoutes) as RouteRecordRaw[]
 })
 
