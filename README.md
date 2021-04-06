@@ -33,8 +33,8 @@ yarn preview
 
 [gitee地址预览](http://foxiswho.gitee.io/vue3-vite2-ep-ts-nixujie/index.html)
 
-![登陆](https://github.com/foxiswho/vue3-vite2-ep-ts-nixujie/raw/master/doc/img/p-login.png)
-![后台主页](https://github.com/foxiswho/vue3-vite2-ep-ts-nixujie/raw/master/doc/img/p-dashboard.png)
+![登陆](./foxiswho/vue3-vite2-ep-ts-nixujie/raw/master/doc/img/p-login.png)
+![后台主页](./foxiswho/vue3-vite2-ep-ts-nixujie/raw/master/doc/img/p-dashboard.png)
 
 # 其他命令
 
