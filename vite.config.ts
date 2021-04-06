@@ -1,12 +1,13 @@
 import {defineConfig} from 'vite'
 import vue from '@vitejs/plugin-vue'
 import path from 'path'
+import envVite from './vite-env'
 
 // import defaultSettings from '@/settings'
-
 // https://vitejs.dev/config/
-export default defineConfig({
-  publicDir:'public',
+// @ts-ignore
+export default ({ mode }) => defineConfig({
+  publicDir: 'public',
   // base:'/', //默认顶级目录
   //base:'/vue3-vite2-ep-ts-nixujie', //二级目录
   resolve: {
@@ -17,12 +18,12 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:3001',
+        target: envVite(mode).appBaseUrl() || 'http://localhost:3001',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, '')
       }
     },
-    port: 3005
+    port: envVite(mode).port()
   },
   build: {
     sourcemap: true,

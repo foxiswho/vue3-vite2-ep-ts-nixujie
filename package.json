@@ -3,7 +3,7 @@
   "name": "element-plus-admin",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite --mode dev",
+    "dev": "vite --mode development",
     "build": "vuedx-typecheck . && vite build",
     "preview": "vite preview",
     "test": "jest ./test",
