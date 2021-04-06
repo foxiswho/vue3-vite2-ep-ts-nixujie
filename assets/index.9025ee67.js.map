@@ -1,0 +1,1 @@
+{"version":3,"file":"index.9025ee67.js","sources":["../../src/views/test/index.vue"],"sourcesContent":["<template>\ntest\n</template>\n\n<script>\nexport default {\n  name: \"index\"\n}\n</script>\n\n<style scoped>\n\n</style>\n"],"names":["name"],"mappings":"+CAKK,SACHA,KAAM"}

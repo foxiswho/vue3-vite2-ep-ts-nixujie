@@ -1,0 +1,1 @@
+{"version":3,"file":"blank.c28ad95a.js","sources":["../../src/layout/blank.vue"],"sourcesContent":["<template>\n    <div>\n        <router-view />\n    </div>\n</template>\n<script lang=\"ts\">\nexport default {\n    name: 'LayoutBlank',\n    setup() {\n        return {}\n    }\n}\n</script>"],"names":["name","setup"],"mappings":"oEAMA,MAAe,CACXA,KAAM,cACNC,WACW"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"index.9b33e17e.js","sources":["../../src/views/Nav/SecondNav/index.vue"],"sourcesContent":["<template>\n    <router-view />\n</template>\n\n<script lang=\"ts\">\nimport { defineComponent } from 'vue'\nexport default{\n    name: 'SecondNav'\n}\n</script>\n\n"],"names":["name"],"mappings":"6DAMA,MAAc,CACVA,KAAM"}
