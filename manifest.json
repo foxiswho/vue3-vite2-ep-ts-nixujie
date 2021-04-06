@@ -1,6 +1,6 @@
 {
   "index.html": {
-    "file": "assets/index.04508799.js",
+    "file": "assets/index.bbe3d26c.js",
     "src": "index.html",
     "isEntry": true,
     "imports": [
@@ -36,7 +36,7 @@
     "file": "assets/echarts.7b83cee2.js"
   },
   "src/layout/index.vue": {
-    "file": "assets/index.75a73bef.js",
+    "file": "assets/index.54913b41.js",
     "src": "src/layout/index.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -44,7 +44,7 @@
       "_element-plus.93d71f21.js"
     ],
     "css": [
-      "assets/index.f8d0dac3.css"
+      "assets/index.fc84ebb3.css"
     ],
     "assets": [
       "assets/head.ea67286d.gif",
@@ -60,7 +60,7 @@
     ]
   },
   "src/layout/redirect.vue": {
-    "file": "assets/redirect.d2d54260.js",
+    "file": "assets/redirect.28103754.js",
     "src": "src/layout/redirect.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -69,7 +69,7 @@
     ]
   },
   "src/views/login/login.vue": {
-    "file": "assets/login.c02a1c55.js",
+    "file": "assets/login.5acf3d31.js",
     "src": "src/views/login/login.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -115,7 +115,7 @@
     ]
   },
   "src/views/Project/ProjectDetail.vue": {
-    "file": "assets/ProjectDetail.45f7731c.js",
+    "file": "assets/ProjectDetail.87b51054.js",
     "src": "src/views/Project/ProjectDetail.vue",
     "isDynamicEntry": true,
     "imports": [
