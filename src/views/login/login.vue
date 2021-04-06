@@ -73,7 +73,7 @@ export default defineComponent({
       }
     }
 
-    function getOtherQuery(query:any) {
+    function getOtherQuery(query:any):any {
       return Object.keys(query).reduce((acc:any, cur:string) => {
         if (cur !== 'redirect') {
           acc[cur] = query[cur]
@@ -85,8 +85,8 @@ export default defineComponent({
     const router = useRouter();
     const route = useRoute();
     const store = useStore()
-    const redirect = route.query && route.query.redirect ? route.query.redirect : ''
-    const otherQuery = route.query ? getOtherQuery(route.query) : ''
+    const redirect = route.query && route.query.redirect ? route.query.redirect : '/'
+    const otherQuery = route.query ? getOtherQuery(route.query) : []
     // console.log(store.getters)
     // console.log(redirect)
     // console.log(otherQuery)
@@ -94,19 +94,28 @@ export default defineComponent({
       let {name, pwd} = form
       if (!await validate(ruleForm)) return
       await store.dispatch('layout/login', {username: name, password: pwd})
-        .then(() => {
-          ElNotification({
-            title: '欢迎',
-            message: '欢迎回来',
-            type: 'success'
-          })
-          //console.log(redirect)
-          //console.log(otherQuery)
-          router.push({path: redirect || '/', query: otherQuery})
-          // this.loading = false
+        .then((data) => {
+          if(200 == data.code){
+            ElNotification({
+              title: '欢迎',
+              message: '欢迎回来',
+              type: 'success'
+            })
+            router.push({path: redirect, query: otherQuery})
+            // this.loading = false
+          }else{
+            ElNotification({
+              message: data.message,
+              type: 'error'
+            })
+          }
         })
-        .catch(() => {
+        .catch((error) => {
           // this.loading = false
+          ElNotification({
+            message: error.data.message,
+            type: 'error'
+          })
         })
 
     }

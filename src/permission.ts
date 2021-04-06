@@ -4,6 +4,7 @@ import getPageTitle from '@/utils/get-page-title'
 import {getLocalToken} from '@/utils/auth'
 import {configure, start, done} from 'nprogress'
 import {RouteRecordRaw} from 'vue-router'
+import {ElNotification} from "element-plus";
 
 configure({showSpinner: false})
 
@@ -13,7 +14,6 @@ router.beforeEach(async (to, from, next) => {
   start()
   let title = to.meta && to.meta.title ? to.meta.title : ''
   // @ts-ignore
-  // document.title = document.title ? `${document.title.split(' |')[0]} | ${title}` : title
   document.title = getPageTitle(title)
   const hasToken = getLocalToken()
   // console.log(hasToken)
@@ -68,6 +68,10 @@ router.beforeEach(async (to, from, next) => {
           // remove token and go to login page to re-login
           await store.dispatch('layout/resetToken')
           //Message.error(error || 'Has Error')
+          ElNotification({
+            message: error,
+            type: 'error'
+          })
           next(`/login?redirect=${to.path}`)
           done()
         }

@@ -1,4 +1,3 @@
-import { IMenubarList } from '@/type/store/interface'
 export const user = [
     { name: 'admin', pwd: 'admin' },
     { name: 'dev', pwd: 'dev' },

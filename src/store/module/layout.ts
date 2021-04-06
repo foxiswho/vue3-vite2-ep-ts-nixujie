@@ -5,6 +5,7 @@ import {getLocalToken, setLocalToken, clearLocalToken} from '@/utils/auth'
 import {login, logout, getInfo, loginParam, loginVo} from '@/api/user'
 import {RouteRecordRaw} from "vue-router";
 import defaultSettings from '@/settings'
+import {ElNotification} from "element-plus";
 
 ////////////
 /**
@@ -141,9 +142,9 @@ const mutations = {
     )
   },
   ADD_CACHED_VIEW: (state: ILayout, view: IMenubarList) => {
-    if (state.cachedViews.includes(view.name)) return
+    if (state.cachedViews.includes(view.name?view.name:'')) return
     if (!view.meta.noCache) {
-      state.cachedViews.push(view.name)
+      state.cachedViews.push(view.name?view.name:'')
     }
   },
 
@@ -156,7 +157,7 @@ const mutations = {
     }
   },
   DEL_CACHED_VIEW: (state: ILayout, view: IMenubarList) => {
-    const index = state.cachedViews.indexOf(view.name)
+    const index = state.cachedViews.indexOf(view.name?view.name:'')
     index > -1 && state.cachedViews.splice(index, 1)
   },
 
@@ -166,7 +167,7 @@ const mutations = {
     })
   },
   DEL_OTHERS_CACHED_VIEWS: (state: ILayout, view: IMenubarList) => {
-    const index = state.cachedViews.indexOf(view.name)
+    const index = state.cachedViews.indexOf(view.name?view.name:'')
     if (index > -1) {
       state.cachedViews = state.cachedViews.slice(index, index + 1)
     } else {
@@ -347,19 +348,20 @@ const actions = {
       login({username: username.trim(), password: password}).then(response => {
         const data = response.data
         // console.log(data)
-        const info: IToken = {
-          ACCESS_TOKEN: data.data.token,
-          ACCESS_USER: data.data.info
+        if (200 == data.code) {
+          const info: IToken = {
+            ACCESS_TOKEN: data.data.token,
+            ACCESS_USER: data.data.info
+          }
+          context.commit('SET_TOKEN', info)
+          context.commit('SET_ROLES', info.ACCESS_USER.roles)
+          context.commit('OPEN_SIDEBAR', false)
+          // context.commit('SET_NAME', info.ACCESS_USER.name)
+          // context.commit('SET_AVATAR', info.ACCESS_USER.avatar)
+          // context.commit('SET_INTRODUCTION', info.ACCESS_USER.introduction)
+          setLocalToken(info)
         }
-        context.commit('SET_TOKEN', info)
-        context.commit('SET_ROLES', info.ACCESS_USER.roles)
-        context.commit('OPEN_SIDEBAR', false)
-        // context.commit('SET_NAME', info.ACCESS_USER.name)
-        // context.commit('SET_AVATAR', info.ACCESS_USER.avatar)
-        // context.commit('SET_INTRODUCTION', info.ACCESS_USER.introduction)
-        setLocalToken(info)
-        // @ts-ignore
-        resolve()
+        resolve(data)
       }).catch(error => {
         reject(error)
       })
