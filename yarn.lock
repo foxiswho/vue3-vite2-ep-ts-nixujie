@@ -1370,6 +1370,11 @@
   resolved "https://registry.npm.taobao.org/@types/json-schema/download/@types/json-schema-7.0.7.tgz?cache=0&sync_timestamp=1613378919536&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fjson-schema%2Fdownload%2F%40types%2Fjson-schema-7.0.7.tgz#98a993516c859eb0d5c4c8f098317a9ea68db9ad"
   integrity sha1-mKmTUWyFnrDVxMjwmDF6nqaNua0=
 
+"@types/json5@^0.0.29":
+  version "0.0.29"
+  resolved "https://registry.npm.taobao.org/@types/json5/download/@types/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
+  integrity sha1-7ihweulOEdK4J7y+UnC86n8+ce4=
+
 "@types/mdast@^3.0.0":
   version "3.0.3"
   resolved "https://registry.npm.taobao.org/@types/mdast/download/@types/mdast-3.0.3.tgz#2d7d671b1cd1ea3deb306ea75036c2a0407d2deb"
@@ -6591,6 +6596,16 @@ ts-jest@^26.4.4:
     semver "7.x"
     yargs-parser "20.x"
 
+tsconfig-paths@^3.9.0:
+  version "3.9.0"
+  resolved "https://registry.npm.taobao.org/tsconfig-paths/download/tsconfig-paths-3.9.0.tgz#098547a6c4448807e8fcb8eae081064ee9a3c90b"
+  integrity sha1-CYVHpsREiAfo/Ljq4IEGTumjyQs=
+  dependencies:
+    "@types/json5" "^0.0.29"
+    json5 "^1.0.1"
+    minimist "^1.2.0"
+    strip-bom "^3.0.0"
+
 tsconfig@^7.0.0:
   version "7.0.0"
   resolved "https://registry.npm.taobao.org/tsconfig/download/tsconfig-7.0.0.tgz#84538875a4dc216e5c4a5432b3a4dec3d54e91b7"
@@ -6853,6 +6868,14 @@ vfile@^4.0.0:
     is-buffer "^2.0.0"
     unist-util-stringify-position "^2.0.0"
     vfile-message "^2.0.0"
+
+vite-tsconfig-paths@^2.5.0:
+  version "2.5.0"
+  resolved "https://registry.npm.taobao.org/vite-tsconfig-paths/download/vite-tsconfig-paths-2.5.0.tgz#ea502da972a2f2ae9c579824449ee610eeeefd3d"
+  integrity sha1-6lAtqXKi8q6cV5gkRJ7mEO7u/T0=
+  dependencies:
+    debug "^4.1.1"
+    tsconfig-paths "^3.9.0"
 
 vite@^2.1.2:
   version "2.1.5"

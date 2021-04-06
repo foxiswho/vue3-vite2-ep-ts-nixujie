@@ -4,6 +4,7 @@ import path from 'path'
 
 // import defaultSettings from '@/settings'
 
+// https://vitejs.dev/config/
 export default defineConfig({
   publicDir:'public',
   // base:'/', //默认顶级目录
@@ -16,7 +17,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:3001/',
+        target: 'http://localhost:3001',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, '')
       }
@@ -39,7 +40,7 @@ export default defineConfig({
   optimizeDeps: {
     // include: ['axios', 'nprogress', 'mockjs']
   },
-  plugins: [vue()],
+  plugins: [vue(),],
   css: {
     postcss: {
       plugins: [
