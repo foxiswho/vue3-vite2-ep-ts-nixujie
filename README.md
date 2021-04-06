@@ -38,7 +38,7 @@ yarn preview
 
 # 创建项目
 ```bash
-# 创建 my-first-vite-app 初始化相关目录和文件
+# 创建 vue3-vite2-ep-ts-nixujie 初始化相关目录和文件
 yarn create @vitejs/app vue3-vite2-ep-ts-nixujie --template vue
 # 进入目录
 cd vue3-vite2-ep-ts-nixujie
