@@ -1,10 +1,18 @@
 <template>
-test
+test 环境变量
   <div>
-    {{env.port}}
-    {{env.VUE_APP_API_BASE_URL}}
-    {{env.BASE_URL}}
-    {{env.ENV}}
+    env.MODE:{{env.MODE}}
+  </div><div>
+    env.PORT:{{env.PORT}}
+  </div>
+  <div>
+    env.PORT_STRING:{{env.PORT_STRING}}
+  </div>
+  <div>
+    env.APP_BASE_API:{{env.APP_BASE_API}}
+  </div>
+  <div>
+    env.APP_BASE_URL:{{env.APP_BASE_URL}}
   </div>
 </template>
 

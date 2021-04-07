@@ -4,6 +4,7 @@ import {IEnv} from '@/type/store/interface'
  */
 export function envs(): IEnv {
   let env: IEnv = {
+    MODE: import.meta.env.MODE,
     PORT: 3005,
     // @ts-ignore
     PORT_STRING: import.meta.env.VITE_PORT || '3005',
