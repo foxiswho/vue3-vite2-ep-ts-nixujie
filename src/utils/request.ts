@@ -66,7 +66,6 @@ request.interceptors.response.use((response: AxiosResponse<IR>) => {
 }, (error: AxiosResponse<IR>) => {
   loading.close()
   if (400 === error.status) {
-    localStorage.clear()
     ElNotification({
       message: error.data.message || 'Error',
       type: 'error',
@@ -83,7 +82,6 @@ request.interceptors.response.use((response: AxiosResponse<IR>) => {
     })
     return Promise.reject(new Error(error.data.message || 'Error'))
   } else if (404 === error.status) {
-    localStorage.clear()
     ElNotification({
       title: '路径不存在',
       message: '路径不存在',
@@ -92,7 +90,6 @@ request.interceptors.response.use((response: AxiosResponse<IR>) => {
     })
     return Promise.reject(new Error('路径不存在'))
   } else if (401 < error.status) {
-    localStorage.clear()
     ElNotification({
       message: error.data.message || 'Error',
       type: 'error',
@@ -100,12 +97,19 @@ request.interceptors.response.use((response: AxiosResponse<IR>) => {
     })
     return error
   } else if (400 > error.status) {
-    localStorage.clear()
-    ElNotification({
-      message: error.data.message || 'Error',
-      type: 'error',
-      duration: 5 * 1000
-    })
+    if (error.statusText == 'Network Error') {
+      ElNotification({
+        message: '网络异常！',
+        type: 'error',
+        duration: 5 * 1000
+      })
+    } else {
+      ElNotification({
+        message: error.data.message || 'Error',
+        type: 'error',
+        duration: 5 * 1000
+      })
+    }
   }
   return Promise.reject(error)
 })
