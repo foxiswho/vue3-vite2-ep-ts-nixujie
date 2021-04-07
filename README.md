@@ -60,6 +60,10 @@ vue upgrade --next
 
 #Added non-passive event listener to a scroll-blocking 'mousewheel' event. Consider marking event handler as 'passive' to make the page more responsive. See https://www.chromestatus.com/feature/5745543795965952
 yarn add default-passive-events --dev
+
+
+yarn add eslint eslint-config-prettier eslint-plugin-prettier eslint-plugin-vue prettier --save-dev
+yarn add @typescript-eslint/eslint-plugin @typescript-eslint/parser --save-dev
 ```
 
 # 感谢 PanJiaChen vue-element-admin
