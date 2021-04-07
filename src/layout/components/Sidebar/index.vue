@@ -47,7 +47,7 @@
               :item="sec"
               :base-path="firstActiveMenus.path"
               :active="(currentActiveMenu.path ? currentActiveMenu.path : '') == resolvePath2(firstActiveMenus.path,sec.path) ? 'active' : ''"
-              :activeMenu="currentActiveMenuPath"
+              :activeMenu="currentActiveMenuPath?currentActiveMenuPath:''"
             />
           </ul>
         </div>

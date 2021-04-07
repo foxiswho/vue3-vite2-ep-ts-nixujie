@@ -63,7 +63,7 @@ export default {
       default: ''
     },
     activeMenu: {
-      type: Object,
+      type: String,
       default: ''
     },
     active2Index: {

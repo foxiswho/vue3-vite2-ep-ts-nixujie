@@ -1,8 +1,9 @@
 <template>
   <section class="app-main">
+    <router-view :key="key" />
     <transition name="fade-transform" mode="out-in">
       <keep-alive :include="cachedViews">
-        <router-view :key="key" />
+
       </keep-alive>
     </transition>
   </section>
@@ -17,7 +18,7 @@ export default defineComponent({
   setup () {
     const store = useStore();
     const route = useRoute();
-    const cachedViews = computed(() => !store.getters.cachedViews);
+    const cachedViews = computed(() => (store.getters.cachedViews && store.getters.cachedViews.length>0));
     const key = computed(() => route.path);
     //console.log(cachedViews)
     return {
