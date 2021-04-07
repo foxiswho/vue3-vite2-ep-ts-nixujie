@@ -54,6 +54,10 @@ yarn
 # 开发运行
 yarn dev
 ```
+# 未来升级功能
+ 1.使用 vite-plugin-mock (https://github.com/anncwb/vite-plugin-mock)
+
+
 # 其他命令
 
 ```bash
