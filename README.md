@@ -1,6 +1,8 @@
 # 须弥戒后台
 elementPlus TypeScript vue3 Vite 2.0 Vue-Router 4.0 Echart 5.0 Axios
 
+>本项目使用了mock(模拟服务器响应),如使用自己接口时候,请注释掉 `main.ts` 中的 `import '@/mock/index'` 即可
+
 # 安装 yarn
 ```bash
 npm install yarn -g
@@ -26,6 +28,7 @@ yarn build
 ```bash
 yarn preview
 ```
+
 
 # 预览
 
@@ -64,6 +67,8 @@ yarn add default-passive-events --dev
 #添加eslint和prettier
 yarn add eslint eslint-config-prettier eslint-plugin-prettier eslint-plugin-vue prettier --save-dev
 yarn add @typescript-eslint/eslint-plugin @typescript-eslint/parser --save-dev
+
+yarn add vite-plugin-mock@next -D
 ```
 
 # 感谢 PanJiaChen vue-element-admin

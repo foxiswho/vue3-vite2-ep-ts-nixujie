@@ -19,6 +19,7 @@ export default (mode?: string) => {
     PORT_STRING: get.VITE_PORT || '3005',
     APP_BASE_API: get.VITE_APP_BASE_API || '',
     APP_BASE_URL: get.VITE_APP_BASE_URL || '',
+    MODE: mode,
   }
   env.PORT = parseInt(env.PORT_STRING)
   return {

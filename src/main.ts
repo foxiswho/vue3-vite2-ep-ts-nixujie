@@ -1,9 +1,11 @@
 import 'default-passive-events';  //去除touchstart谷歌提示
-import { createApp } from 'vue'
+import {createApp} from 'vue'
 import App from './App.vue'
 import ElementPlus from 'element-plus'
 import router from '@/router/index'
-import { store } from '@/store/index'
+import {store} from '@/store/index'
+import {envs} from '@/utils/env'
+// 本项目使用了mock(模拟服务器响应), 如使用自己接口时候,请注释掉下面
 import '@/mock/index'
 import '@/permission'
 // import './index.css'

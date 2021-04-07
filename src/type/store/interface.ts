@@ -81,4 +81,5 @@ export interface IEnv {
   PORT_STRING: string,
   APP_BASE_API: string,
   APP_BASE_URL: string,
+  MODE: string,
 }
