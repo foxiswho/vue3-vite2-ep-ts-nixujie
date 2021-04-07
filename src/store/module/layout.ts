@@ -369,9 +369,9 @@ const actions = {
   },
 
   // get user info
-  getInfo(context: ActionContext<ILayout, IState>): Promise<any> {
-    return new Promise((resolve, reject) => {
-      getInfo().then(response => {
+  async getInfo(context: ActionContext<ILayout, IState>): Promise<any> {
+    return new Promise(async (resolve, reject) => {
+      await getInfo().then(response => {
         const data = response.data
         // console.log(data)
         if (!data || data.code != 200) {
