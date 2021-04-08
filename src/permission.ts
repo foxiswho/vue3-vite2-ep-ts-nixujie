@@ -45,21 +45,25 @@ router.beforeEach(async (to, from, next) => {
           const data = await store.dispatch('layout/getInfo')
           // console.log(data)
           const roles = data.data.info.roles
-          // generate accessible routes map based on roles
-          const accessRoutes = await store.dispatch('layout/generateRoutes', roles)
-          // console.log('store.getters.roles=',store.getters.roles)
-          // console.log('store.getters=',store.getters)
-          // console.log(accessRoutes)
-          // console.log(router.getRoutes())
-          // dynamically add accessible routes
-          if (accessRoutes && accessRoutes.length > 0) {
-            accessRoutes.forEach((item: RouteRecordRaw) => {
-              // console.log(item)
-              router.addRoute(item)
-            })
+          // 判断是否添加过路由
+          if(!store.getters.routes || 0 == store.getters.routes.length){
+            // generate accessible routes map based on roles
+            const accessRoutes = await store.dispatch('layout/generateRoutes', roles)
+            // console.log('store.getters.roles=',store.getters.roles)
+            // console.log('store.getters=',store.getters)
+            // console.log(accessRoutes)
+            // console.log(router.getRoutes())
+            // dynamically add accessible routes
+            if (accessRoutes && accessRoutes.length > 0) {
+              accessRoutes.forEach((item: RouteRecordRaw) => {
+                // console.log(item)
+                router.addRoute(item)
+              })
+            }
+            // console.log(router.getRoutes())
+            // console.log(router)
           }
-          // console.log(router.getRoutes())
-          // console.log(router)
+
           // hack method to ensure that addRoutes is complete
           // set the replace: true, so the navigation will not leave a history record
           next({...to, replace: true})
